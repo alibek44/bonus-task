@@ -60,12 +60,16 @@ public class Prim {
         Edge best = null;
 
         for (Edge e : g.getEdges()) {
-            if (comp[e.u] != comp[e.v]) {
+            if (comp[e.u] != comp[e.v] && !isSameEdge(e, removed)) {
                 if (best == null || e.w < best.w) {
                     best = e;
                 }
             }
         }
         return best;
+    }
+
+    private static boolean isSameEdge(Edge e1, Edge e2) {
+        return (e1.u == e2.u && e1.v == e2.v) || (e1.u == e2.v && e1.v == e2.u);
     }
 }

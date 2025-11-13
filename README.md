@@ -22,6 +22,7 @@ Setup Instructions
 Clone the Repository
 
 To get started, clone this repository to your local machine:
+
 git clone https://github.com/alibek44/bonus-task.git
 cd bonus-task
 
